@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue js</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1>Hello Vue js........</h1>
+    <div id="app">
+      <h1 v-if="showtemplate">{{ tittle }} and it is realesed in {{ year }}</h1>
+      <button v-on:click="year++"><h3>Increase the year</h3></button>
+      <button id="btn" v-on:click="year--"><h3>Decrease the year</h3></button><br><br>
+
+      <button @click="toogle">
+          <span v-if="showtemplate">Hide template</span>
+          <span v-else>Show template</span>
+        </button><hr>
+        <br>
+<!-- <div class="group-box"> -->
+    <div class="box" @mouseover="handel">Mouse over</div>
+    <div class="box" @mouseover="handel">Mouse over again</div>
+    <div class="box" @mouseover="handel">Mouse over again agian</div>
+    <div class="box" @mouseleave="handel">Mouse leave</div>
+    <div class="box" @dblclick="handel">Mouse click</div>
+    <div class="box" @mousemove="handelMouse">Mouse over -- {{ x }},{{ y }}</div>
+<!-- </div> -->
+
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
